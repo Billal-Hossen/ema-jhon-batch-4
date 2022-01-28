@@ -1,0 +1,16 @@
+.product-container {
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.product-details h3 {
+  color: rgb(34, 0, 128);
+}
+.btn-regular {
+  background-color: goldenrod;
+  height: 25px;
+  width: 150px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
