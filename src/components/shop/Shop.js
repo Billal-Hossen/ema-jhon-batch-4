@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { addToDB, getStoredCart } from '../../utilities/local';
+import { addToDb, getStoredCart } from '../../utilities/local';
 import Cart from '../cart/Cart';
 import Product from '../product/Product';
 import './Shop.css';
@@ -9,7 +9,7 @@ const Shop = () => {
     const [cart,setCart]=useState([]);
     const [searchProducts,setSearchProducts] = useState([])
     useEffect(()=>{
-        fetch('./products.JSON')
+        fetch('./products.json')
         .then(res=>res.json())
         .then(data=>{
             setProducts(data);
@@ -22,7 +22,7 @@ const Shop = () => {
             const saveCart=getStoredCart();
             const soredCart= [];
             for (const key in saveCart) {
-                console.log(key,saveCart[key]);
+                // console.log(key,saveCart[key]);
                const addedProduct= products.find((product)=>product.key===key);
                 if(addedProduct){
                     const quantity=saveCart[key];
@@ -39,7 +39,7 @@ const Shop = () => {
 
     const handleAddToCart=(product)=>{
        const newCart=[...cart,product];
-       addToDB(product.key)
+       addToDb(product.key)
        setCart(newCart);
        
     }

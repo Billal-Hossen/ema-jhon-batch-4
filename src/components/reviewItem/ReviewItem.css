@@ -1,0 +1,10 @@
+.review-item {
+  width: 75%;
+  text-align: center;
+  margin-left: 100px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}

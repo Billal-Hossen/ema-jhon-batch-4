@@ -28,7 +28,5 @@ const getDb=()=>{
     return saveDb? JSON.stringify(saveDb) : {};
  }
 
- export {
-    addTodb, saveDb, removeDb
-};
+ export { addTodb, saveDb, removeDb };
 

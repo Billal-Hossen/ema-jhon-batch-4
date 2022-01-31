@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 
 const useProduct=()=>{
+  
     const [products,setProducts]= useState([]);
     useEffect(()=>{
-        fetch('../fakeData/products.JSON')
+        fetch('./products.json')
         .then(res=>res.json())
-        .then(data=>setProducts(data))
+        .then(data=>{
+            setProducts(data);
+           
+        })
 
     },[])
 
-    return [products];
+    return [products,setProducts];
 
 }
 
